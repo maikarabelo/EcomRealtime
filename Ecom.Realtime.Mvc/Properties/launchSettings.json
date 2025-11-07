@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Ecom.Realtime.Mvc": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:16039;http://localhost:16040"
+    }
+  }
+}

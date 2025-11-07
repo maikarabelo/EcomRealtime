@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "EVENT_HUB_NAME": "orders",
+    "EVENT_HUB_CONSUMER_GROUP": "$Default",
+    "EVENT_HUB_CONN": "Endpoint=sb://...;SharedAccessKeyName=...;SharedAccessKey=...;EntityPath=orders"
+  },
+  "ConnectionStrings": {
+    "SqlServer": "Server=YOUR_SQL_SERVER_FQDN,1433;Database=RealtimeDb;User Id=appuser;Password=REPLACE_ME;TrustServerCertificate=True;"
+  }
+}

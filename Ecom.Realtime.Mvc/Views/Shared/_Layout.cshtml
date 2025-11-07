@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Realtime Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/holiday.css" />
+    <style>
+        body { max-width: 1100px; margin: auto; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border-bottom: 1px solid #ddd; padding: 8px; }
+        th { text-align: left; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Realtime Dashboard</h1>
+</header>
+<main role="main" class="pb-3">
+    @RenderBody()
+</main>
+</body>
+</html>

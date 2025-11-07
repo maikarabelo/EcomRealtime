@@ -1,0 +1,35 @@
+@model Ecom.Realtime.Mvc.Models.DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Live Sales (last minute)</h2>
+<p>Orders: <strong>@Model.LastMinuteCount</strong></p>
+<p>Total: <strong>@Model.LastMinuteTotal</strong></p>
+
+<h3>Last 60 minutes</h3>
+
+@if (Model.Series is { Count: > 0 })
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Minute (UTC)</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var p in Model.Series)
+        {
+            <tr>
+                <td>@p.Bucket.ToString("yyyy-MM-dd HH:mm")</td>
+                <td>@p.Total</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No data yet. Start the simulator to push events into Event Hubs.</p>
+}
